@@ -108,9 +108,9 @@ body::after {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: var(--ui-bg-color);
+  background-image: var(--gradient-primary);
   transition: var(--transition-med);
-  opacity: 0.35;
+  opacity: 0.3;
   z-index: -1;
 }
 

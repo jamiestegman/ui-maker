@@ -17,11 +17,14 @@
 
   <h1 align="center">UI Maker</h1>
 
+  <span align="center">
   ![GitHub](https://img.shields.io/github/license/jamiestegman/ui-maker)
   ![GitHub issues](https://img.shields.io/github/issues/jamiestegman/ui-maker)
+  </span>
 
   <p align="center">
     UI Maker is an app that allows React devs to streamline development by visually creating components and generating ready-made code that they can paste into their projects.
+    <br />
     <br />
     <a href="https://jamiestegman.github.io/ui-maker">Live Site</a>
     ·
@@ -91,9 +94,9 @@ Out of the box, UI Maker components have support for various props that you're a
 
 <ul>
   <li>
-    Button
+    <strong>Button</strong>
     <ul>
-      <li>**loading**: Shows a loading spinner and sets the button to a disabled state.</li>
+      <li><i>loading</i>: Shows a loading spinner and sets the button to a disabled state.</li>
     </ul>
   </li>
 </ul>

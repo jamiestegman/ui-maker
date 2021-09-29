@@ -14,6 +14,7 @@ const Wrapper = styled.button`
   width: max-content;
   padding: 1em 1em;
   background-image: none;
+  background-color: var(--color-soft);
   color: var(--text-h);
   font-size: 1em;
   font-weight: 500;
