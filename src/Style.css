@@ -1,0 +1,204 @@
+:root {
+
+  --text-h: #19191a;
+  --text-p: #3c3d3d;
+  --text-soft: #7d7e8075;
+  --text-console: #c5c5c5;
+  --color-primary: #2b64ff;
+  --color-primary-light: #2b64ff20;
+  --gradient-primary: linear-gradient(to right bottom, #2b52ff,#a73bff);
+  --color-soft: #ecf0f3;
+  --color-ultrasoft: #f6f7f9;
+  --color-border: #f0f2f3;
+  --swatch-border: #3c3d3d40;
+  --switch-bg: #d3d6d8;
+  --bg-primary: #ffffff;
+  --bg-accent: #d4dcf5;
+  --bg-soft: #f0f1f2;
+  --radius-m: 5px;
+  --radius-lg: 12px;
+  --transition-fast: 0.1s ease;
+  --transition-med: 0.15s ease;
+  --transition-slow: 0.3s ease;
+
+  --shadow-card: rgba(0, 0, 0, 0.05) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  --shadow-dropdown: 0 0 0 1px rgb(136 152 170 / 10%), 0 15px 35px 0 rgb(49 49 93 / 10%), 0 5px 15px 0 rgb(0 0 0 / 8%);
+  --focus: 0 0 0 3px #4c6cea90;
+
+  /* UI Component Styles */
+  --ui-padding: 1.1em 2.2em;
+  --ui-border-radius: 6px;
+  --ui-bg-color: #2b64ff;
+  --ui-bg-color-hover: #2659e7;
+  --ui-font-color: #ffffff;
+  --ui-font-color-hover: #ffffff;
+  --ui-font-size: 16px;
+  --ui-font-size-hover: 16px;
+  --ui-font-weight: 500;
+  --ui-font-weight-hover: 500;
+  --ui-border-style: none;
+  --ui-border-style-hover: none;
+  --ui-border-style-focus: none;
+  --ui-border-width: 1px;
+  --ui-border-width-hover: 1px;
+  --ui-border-width-focus: 1px;
+  --ui-border-color: #ffffff;
+  --ui-border-color-hover: #ffffff;
+  --ui-border-color-focus: #ffffff;
+  --ui-box-shadow: 0 0.25em 15px 0 #34353640;
+  --ui-box-shadow-hover: 0 0.25em 15px 0 #34353640;
+  --ui-box-shadow-focus: 0 0 0 3px #57ddff81;
+
+  --ui-transition: 0.2s ease;
+}
+
+.dark-mode {
+  --bg-primary: #18191a;
+  --bg-accent: #212224;
+  --bg-soft: #242526;
+  --text-h: #f4f5f7;
+  --text-p: #d1d1d4;
+  --text-soft: #d1d1d460;
+  --color-soft: #242525;
+  --color-ultrasoft: #19191a;
+  --color-border: #202122;
+  --swatch-border: #d1d1d450;
+  --switch-bg: #3d3d3f;
+  --shadow-dropdown: 0 0 0 1px rgb(255 255 255 / 8%), 0 15px 35px 0 rgb(0 0 0 / 10%), 0 5px 15px 0 rgb(0 0 0 / 8%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.4;
+  font-family: 'Open Sans';
+}
+
+.preload::before, .preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+ }
+
+html, body {
+  overflow: hidden;
+  max-height: 100vh;
+  max-width: 100vw;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: var(--bg-soft);
+  transition: var(--transition-med);
+}
+
+body::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--ui-bg-color);
+  transition: var(--transition-med);
+  opacity: 0.35;
+  z-index: -1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-h);
+}
+
+p, span {
+  color: var(--text-p);
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+a {
+  text-decoration: none;
+}
+
+@keyframes dropdown-fadein {
+	100% {
+		opacity: 1;
+    transform: scale(1);
+	}
+}
+
+@keyframes dropdown-fadeout {
+	100% {
+		opacity: 0;
+    transform: scale(0.85);
+	}
+}
+
+@keyframes snackbar-fade {
+  0% {
+
+  } 80% {
+    opacity: 1;
+  } 100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+
+@keyframes fadeOut {
+ 0% { opacity: 1; transform: translateY(0); }
+ 100% { opacity: 0; transform: translateY(5px); }
+}
+
+@keyframes fadeInUp {
+  0% {opacity: 0; transform: translateY(5px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+
+.disabled {
+  opacity: 0.3;
+  pointer-events: none;
+  transition: 0.2s ease;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+}
+
+
+@media (max-width: 600px) {
+  .tablet {
+    display: none;
+  }
+  .desktop {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .desktop {
+    display: none;
+  }
+}
+@media (max-width: 1200px) {
+  
+}
