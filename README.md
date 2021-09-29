@@ -17,7 +17,8 @@
 
   <h1 align="center">UI Maker</h1>
 
-  
+  ![GitHub](https://img.shields.io/github/license/jamiestegman/ui-maker)
+  ![GitHub issues](https://img.shields.io/github/issues/jamiestegman/ui-maker)
 
   <p align="center">
     UI Maker is an app that allows React devs to streamline development by visually creating components and generating ready-made code that they can paste into their projects.
