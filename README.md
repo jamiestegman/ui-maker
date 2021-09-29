@@ -9,20 +9,20 @@
 [license-shield]: https://img.shields.io/github/license/jamiestegman/repo.svg?style=for-the-badge
 [license-url]: https://github.com/jamiestegman/ui-maker/blob/master/LICENSE.txt
 
+<br/>
 <p align="center">
   <a href="https://github.com/jamiestegman/ui-maker">
     <img src="./src/images/logo.png" alt="Logo" width="100" height="100">
   </a>
 
-  <h3 align="center">UI Maker</h3>
+  <h1 align="center">UI Maker</h1>
+
+  
 
   <p align="center">
     UI Maker is an app that allows React devs to streamline development by visually creating components and generating ready-made code that they can paste into their projects.
     <br />
-    <a href="https://github.com/jamiestegman/ui-maker"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://uimaker.app">Live Site</a>
+    <a href="https://jamiestegman.github.io/ui-maker">Live Site</a>
     ·
     <a href="https://github.com/jamiestegman/ui-maker/issues">Report Bug</a>
     ·
@@ -30,12 +30,9 @@
   </p>
 </p>
 
+<br/>
 
-[https://img.shields.io/github/license/jamiestegman/ui-maker]([license-url])
-
-
-<details open="open">
-  <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
+## Table of Contents
   <ol>
     <li><a href="#features">Features</a></li>
     <li><a href="#getting-started">Getting Started</a></li>
@@ -43,13 +40,13 @@
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#license">License</a></li>
   </ol>
-</details>
 
+<br/>
 
 ## Features
 
 - 🚀 **Fast**: Built using only React hooks and functional components.
-- 😊 **Simple**: With no signup required, you can use UI Maker any time, any place, instantly.
+- 😊 **Simple**: With no signup required, you can easily access UI Maker any time, any place.
 - 👋 **Clear**: An easy-to-navigate UI, allowing for full usage with next to no learning time.
 - 👫 **Cross-browser**: Works for most browsers, regardless of version.
 - 📲 **Mobile-friendly**: Supports mobile devices and touch screens.
@@ -60,10 +57,11 @@
 * [React.js](https://reactjs.org/)
 * [styled-components](https://styled-components.com/)
 
+<br/>
 
 ## Getting Started
 
-1. Visit the [live site](https://uimaker.app) and click 'Get Started'.
+1. Visit the [live site](https://jamiestegman.github.io/ui-maker) and click 'Get Started'.
 2. Choose a component type that you'd like to create.
 3. Use the interface on the left to modify the preview on the right and turn options on or off using the switch to the left of the option name.
 4. When you're satisfied with what you've created, click 'View Code' at the top of the preview pane.
@@ -73,6 +71,8 @@
 ### Prerequisites
 
 The code that UI Maker currently provides is designed to be integrated into a project using **React** and [styled-components](https://styled-components.com/).
+
+<br/>
 
 ## Usage
 
@@ -97,6 +97,7 @@ Out of the box, UI Maker components have support for various props that you're a
   </li>
 </ul>
 
+<br/>
 
 ## Roadmap
 
@@ -110,6 +111,8 @@ These may include (but are not limited to):
 * Snackbar
 
 Alongside the addition of other components, there are also ideas of including support for animations, other code types and the ability to share created components with others.
+
+<br/>
 
 ## License
 
