@@ -290,7 +290,7 @@ function Editor(props) {
 
   // Reducer function to handle state changes to options.
   function reducer (optionState, action) {
-  
+
     switch (action.type) {
 
       // Toggle the Background switch
@@ -346,19 +346,19 @@ function Editor(props) {
             return {...optionState, toggleBorder: true}
           } else {
             return {...optionState, toggleBorder: false}
-          } 
+          }
         } else if (tabState === 1) {
           if (optionState.toggleBorderHover === false) {
             return {...optionState, toggleBorderHover: true}
           } else {
             return {...optionState, toggleBorderHover: false}
-          } 
+          }
         } else {
           if (optionState.toggleBorderFocus === false) {
             return {...optionState, toggleBorderFocus: true}
           } else {
             return {...optionState, toggleBorderFocus: false}
-          } 
+          }
         }
 
       // Toggle the Shadow switch
@@ -521,7 +521,7 @@ function Editor(props) {
         if (tabState === 0) {
           document.querySelector(':root').style.setProperty('--ui-box-shadow', combineBoxShadow(optionState.boxShadowDistance, optionState.boxShadowBlur, optionState.boxShadowSpread, action.payload));
           return {...optionState, boxShadowColor: action.payload}
-    
+
         } else if (tabState === 1) {
           document.querySelector(':root').style.setProperty('--ui-box-shadow-hover', combineBoxShadow(optionState.boxShadowDistanceHover, optionState.boxShadowBlurHover, optionState.boxShadowSpreadHover, action.payload));
           return {...optionState, boxShadowColorHover: action.payload}
@@ -572,7 +572,7 @@ function Editor(props) {
           <Slider className="slider" />
         </EditorTabs>
         </FadeIn>
-        
+
         { tabState === 0 && <EditableContent type="default" {...{optionState, dispatch}} /> }
 
         { tabState === 1 && <EditableContent type="hover" {...{optionState, dispatch}} /> }
@@ -587,8 +587,7 @@ function Editor(props) {
         <CodePanel ref={currentCodeRef}>
           <pre>
 
-{`import React from 'react';
-import styled from 'styled-components';
+{`import styled from 'styled-components';
 
 const Element = styled.button\`
   min-width: 11em;
@@ -598,13 +597,13 @@ const Element = styled.button\`
   color: ${optionState.fontColor};
   font-size: ${optionState.fontSize};
   font-weight: ${optionState.fontWeight};
-  border: ${optionState.borderStyle !== 'None' && optionState.toggleBorder ? optionState.borderStyle.toLowerCase() + " " + optionState.borderWidth + " " + optionState.borderColor + ";" : null}
+  border: ${optionState.borderStyle !== 'None' && optionState.toggleBorder ? optionState.borderStyle.toLowerCase() + " " + optionState.borderWidth + " " + optionState.borderColor + ";" : 'none;'}
   border-radius: ${optionState.shape === 'Smooth' ? '5px' : optionState.shape === 'Circular' ? '999px' : '0px'};`}
   {optionState.toggleShadow && combineBoxShadow(optionState.boxShadowDistance, optionState.boxShadowBlur, optionState.boxShadowSpread, optionState.boxShadowColor)}{`
   transition: 0.2s ease;
   cursor: pointer;
   user-select: none;
-  
+
   &:hover {`}
     {optionState.toggleBackgroundHover && '\n    background-color: ' + optionState.backgroundColorHover + ";"}
     {optionState.toggleFontHover && '\n   color:' + optionState.fontColorHover + ";"}
@@ -621,7 +620,7 @@ const Element = styled.button\`
     {optionState.toggleFontFocus && '\n    font-size: ' + optionState.fontSizeFocus + ";"}
     {optionState.toggleFontFocus && '\n    font-weight: ' + optionState.fontWeightFocus + ";"}
     {optionState.borderStyleFocus !== 'None' && optionState.toggleBorderFocus ? '\n    border: ' + optionState.borderStyleFocus.toLowerCase() + " " + optionState.borderWidthFocus + " " + optionState.borderColorFocus + ";" : null}
-    {optionState.toggleShadowFocus && combineBoxShadow(optionState.boxShadowDistanceFocus, optionState.boxShadowBlurFocus, optionState.boxShadowSpreadFocus, optionState.boxShadowColorFocus)}{`
+    {optionState.toggleShadowFocus && '\n    box-shadow: ' + combineBoxShadow(optionState.boxShadowDistanceFocus, optionState.boxShadowBlurFocus, optionState.boxShadowSpreadFocus, optionState.boxShadowColorFocus) + ";"}{`
     transition: 0.2s ease;
   }
 
@@ -666,7 +665,7 @@ function Button(props) {
 
 export default Button;`}</pre>
           <ConsoleBackground />
-        </CodePanel> 
+        </CodePanel>
         }
 
         <DisplayControls className={codeVisible && 'light'}>

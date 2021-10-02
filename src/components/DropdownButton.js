@@ -73,12 +73,12 @@ const Button = styled.div`
   font-weight: 500;
   color: var(--color-primary);
   outline: none;
-  border-radius: var(--radius-m);
   display: flex;
   align-items: center;
   justify-content: center;
   user-select: none;
   text-transform: capitalize;
+  border-bottom: dotted 1px var(--color-primary-light);
 
   @media (max-width: 768px) {
     font-size: 0.7em;
@@ -141,7 +141,7 @@ function DropdownButton(props) {
 
     // Gets distance from bottom of dropdown menu to the bottom of the browser window.
     let distance = window.innerHeight - dropdown.current.getBoundingClientRect().bottom;
-    // if the distance is less than 10 pixels, cause the menu to drop upwards instead. 
+    // if the distance is less than 10 pixels, cause the menu to drop upwards instead.
     if (distance < 10) {
       wrapper.current.classList.add('drop-up');
       wrapper.current.style.top = '-' + (dropdown.current.clientHeight+5) + 'px';

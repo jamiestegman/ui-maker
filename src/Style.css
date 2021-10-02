@@ -5,7 +5,7 @@
   --text-soft: #7d7e8075;
   --text-console: #c5c5c5;
   --color-primary: #2b64ff;
-  --color-primary-light: #2b64ff20;
+  --color-primary-light: #2b64ff40;
   --gradient-primary: linear-gradient(to right bottom, #2b52ff,#a73bff);
   --color-soft: #ecf0f3;
   --color-ultrasoft: #f6f7f9;
@@ -200,5 +200,5 @@ input[type="checkbox"] {
   }
 }
 @media (max-width: 1200px) {
-  
+
 }
